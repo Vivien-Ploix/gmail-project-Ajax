@@ -1,0 +1,27 @@
+<%= button_to "Recevoir un email", { action: "create" }, remote: true, class: " btn btn-dark ml-5" %>
+
+
+</br></br></br>
+
+
+<div class= "row">
+  <div class= "col-md-4 offset-md-1">
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Liste des emails</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <% @emails.each do |email| %>
+        <%= render 'email', email: email %>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+
+  <div class= "col-md-4 offset-md-1">
+        <div id="mailViewer">
+        </div>
+  </div>
+</div>

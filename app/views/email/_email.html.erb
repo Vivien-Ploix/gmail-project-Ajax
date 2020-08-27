@@ -1,0 +1,12 @@
+
+  <% if email.read %>
+    <tr id="email_<%= email.id %>" class="mail_row">
+    <th>    <%= link_to email.object, email_path(email.id), class: "text-dark", remote: true %>
+    </th>
+    </tr>
+  <% else %>
+    <tr id="email_<%= email.id %>" class="mail_row">
+    <th>    <%= link_to email.object, email_path(email.id), class: "text-info", remote: true %>
+    </th>
+    </tr>
+  <% end %>
